@@ -5,7 +5,7 @@ import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.os.Handler
 import android.os.Message
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -111,7 +111,7 @@ class WPopupAdapter(private val popup: WPopup) : RecyclerView.Adapter<WPopupAdap
 
                 val handler = @SuppressLint("HandlerLeak")
                 object : Handler() {
-                    override fun handleMessage(msg: Message?) {
+                    override fun handleMessage(msg: Message) {
                         super.handleMessage(msg)
                         popup.dismiss()
                     }
